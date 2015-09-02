@@ -14,11 +14,14 @@ import java.io.IOException;
 
 public class Lightning extends PApplet {
 
+PImage img;
 public void setup()
 {
   size(300,300);
   strokeWeight(.5f);
   background(0, 0, 0);
+  img = loadImage("patrick_lightning.PNG");
+
 }
 int startX;
 int startY = 0;
@@ -40,14 +43,15 @@ public void draw()
 			endY = startY + ((int)(Math.random()*5));
 			line(startX, startY, endX, endY);
 			startX = endX;
-			startY = endY;
-			
-			
+			startY = endY;	
 		}
 		if (counter == 1) {
 			background(0);
 			counter = 0;
 		}
+		}
+		if (keyPressed == true) {
+			image(img, mouseX-130, mouseY-90);
 	}
 	
 }

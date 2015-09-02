@@ -1,8 +1,11 @@
+PImage img;
 void setup()
 {
   size(300,300);
   strokeWeight(.5);
   background(0, 0, 0);
+  img = loadImage("patrick_lightning.PNG");
+
 }
 int startX;
 int startY = 0;
@@ -30,10 +33,9 @@ void draw()
 			background(0);
 			counter = 0;
 		}
-		
-
 		}
 		if (keyPressed == true) {
+			image(img, mouseX-130, mouseY-90);
 	}
 	
 }
